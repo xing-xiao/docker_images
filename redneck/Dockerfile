@@ -10,16 +10,12 @@ ADD conf/id_rsa /root/.ssh/id_rsa
 RUN pip3 install jupyter
 RUN pip3 install elasticsearch kafka-python pymysql
 RUN pip3 install PyYAML SQLAlchemy cachetools python-dateutil configparser
-RUN pip3 install numpy
-RUN pip3 install matplotlib
 RUN pip3 install scipy
-RUN pip3 install -U scikit-learn
 RUN pip3 install rq
 RUN pip3 install requests
 RUN pip3 install docx xlrd
 RUN pip3 install happybase
 RUN pip3 install pymongo
-RUN pip3 install tenserflow
 COPY conf/supervisord.conf /etc
 RUN jupyter notebook --generate-config --allow-root \
     && sed -i "218cc.NotebookApp.password = 'sha1:714afce9dd05:552ef3fd7e5b3eb7eb76ff8db1d5d7d0a8c7b117'" /root/.jupyter/jupyter_notebook_config.py
