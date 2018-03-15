@@ -8,9 +8,9 @@ RUN apk add supervisor && mkdir /etc/supervisord.d
 ADD conf/id_rsa.pub /root/.ssh/id_rsa.pub
 ADD conf/id_rsa /root/.ssh/id_rsa
 RUN pip3 install jupyter
+RUN pip3 install pandas
 RUN pip3 install elasticsearch kafka-python pymysql
 RUN pip3 install PyYAML SQLAlchemy cachetools python-dateutil configparser
-RUN pip3 install pandas
 RUN pip3 install numpy
 RUN pip3 install matplotlib
 RUN pip3 install scipy
