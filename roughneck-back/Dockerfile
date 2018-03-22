@@ -1,7 +1,7 @@
 FROM python:3.7.0a3-alpine3.6
 MAINTAINER xiao_xing <lo0o.xing@gmail.com>
 RUN apk update
-RUN apk add gcc libzmq libc-dev build-base freetype-dev libjpeg-turbo-dev libpng-dev lapack-dev gfortran musl-dev nodejs nodejs-npm python-dev libxml2-dev libxslt-dev zlib-dev
+RUN apk add gcc libzmq libc-dev build-base freetype-dev libjpeg-turbo-dev libpng-dev lapack-dev gfortran musl-dev nodejs nodejs-npm python-dev libxml2-dev libxslt-dev zlib-dev lftp
 RUN apk add tzdata && cp /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
 RUN apk add git openssh ca-certificates && update-ca-certificates && apk add openssl
 RUN apk add supervisor && mkdir /etc/supervisord.d
