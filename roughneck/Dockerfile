@@ -6,5 +6,6 @@ RUN pip3 install jupyter
 RUN pip3 install elasticsearch kafka-python pymysql redis
 RUN pip3 install requests
 RUN pip3 install rq
+RUN sudo apt-get install libtiff5-dev zlib1g-dev libfreetype6-dev liblcms2-dev libwebp-dev tcl8.6-dev tk8.6-dev python-tk
 RUN pip3 install docx xlrd
 RUN pip3 install PyYAML SQLAlchemy cachetools python-dateutil configparser
