@@ -16,5 +16,5 @@ ADD plugins.sbt /opt/template/project/plugins.sbt
 ADD Hello.scala /opt/template/src/main/scala/example/Hello.scala
 WORKDIR /opt/template/
 RUN sbt run
-RUN sbt test
+RUN rm -rf /opt/template/src/test/
 RUN sbt assembly
