@@ -7,4 +7,11 @@ RUN echo "deb https://dl.bintray.com/sbt/debian /" | tee -a /etc/apt/sources.lis
 RUN sbt test
 WORKDIR /opt/
 RUN echo "HelloWorld" | sbt new sbt/scala-seed.g8
-WORKDIR /opt/HelloWorld/
+WORKDIR /opt/helloworld
+RUN sbt run
+RUN echo "Template" | sbt new sbt/scala-seed.g8
+ADD build.sbt /opt/template/build.sbt
+ADD plugins.sbt /opt/template/project/plugin.sbt
+WORKDIR /opt/template/
+RUN sbt run && sbt test
+RUN sbt assembly
