@@ -13,5 +13,5 @@ RUN echo "Template" | sbt new sbt/scala-seed.g8
 ADD build.sbt /opt/template/build.sbt
 ADD plugins.sbt /opt/template/project/plugin.sbt
 WORKDIR /opt/template/
-RUN sbt run && sbt test
+RUN sbt run
 RUN sbt assembly
