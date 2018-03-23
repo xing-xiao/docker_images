@@ -14,5 +14,5 @@ ADD build.sbt /opt/template/build.sbt
 ADD plugins.sbt /opt/template/project/plugins.sbt
 WORKDIR /opt/template/
 RUN ls -lh
-RUN sbt run
-RUN sbt assembly
+#RUN sbt run
+#RUN sbt assembly
