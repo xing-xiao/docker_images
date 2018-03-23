@@ -10,3 +10,11 @@ RUN apt-get -y install libtiff5-dev zlib1g-dev libfreetype6-dev liblcms2-dev lib
 RUN pip3 install docx xlrd
 RUN pip3 install SQLAlchemy cachetools python-dateutil configparser
 RUN pip3 install PyYAML
+RUN pip3 install pymongo
+RUN pip3 install pandas
+RUN pip3 install numpy
+RUN pip3 install matplotlib
+RUN pip3 install scipy
+RUN pip3 install -U scikit-learn
+RUN pip3 install happybase
+RUN pip3 install tensorflow
