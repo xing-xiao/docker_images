@@ -8,4 +8,3 @@ RUN sbt test
 WORKDIR /opt/
 RUN echo "HelloWorld" | sbt new sbt/scala-seed.g8
 WORKDIR /opt/HelloWorld/
-RUN sbt run 
