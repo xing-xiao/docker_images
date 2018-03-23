@@ -11,7 +11,8 @@ WORKDIR /opt/helloworld
 RUN sbt run
 RUN echo "Template" | sbt new sbt/scala-seed.g8
 ADD build.sbt /opt/template/build.sbt
-ADD plugins.sbt /opt/template/project/plugin.sbt
+ADD plugins.sbt /opt/template/project/plugins.sbt
 WORKDIR /opt/template/
+RUN ls -lh
 RUN sbt run
 RUN sbt assembly
