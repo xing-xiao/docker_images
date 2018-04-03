@@ -19,3 +19,5 @@ RUN pip3 install -U scikit-learn
 RUN pip3 install happybase
 RUN pip3 install tensorflow
 RUN pip3 install apscheduler
+RUN pip3 install click dict2xml et-xmlfile Flask Flask-Cache Flask-Login itsdangerous jdcal Jinja2 MarkupSafe multi-key-dict openpyxl pbr pycurl six urllib3 Werkzeug WTForms
+RUN pip3 install azkaban
